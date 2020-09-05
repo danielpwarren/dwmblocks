@@ -32,13 +32,13 @@ index c66dbc7..f4bc7ef 100644
 +        if (*button)
 +        {
 +		setenv("BUTTON", button, 1);
-+                cmdf = popen(cmd,"r");
-+                *button = '\0';
-+                unsetenv("BUTTON");
++               cmdf = popen(block->command,"r");
++               *button = '\0';
++               unsetenv("BUTTON");
 +        }
 +        else
 +	{
-+		cmdf = popen(cmd,"r");
++		cmdf = popen(block->command,"r");
 +	}
  	if (!cmdf)
  		return;

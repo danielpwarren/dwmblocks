@@ -6,8 +6,9 @@ static const Block blocks[] = {
 	{"", "~/.scripts/brightness.sh",					0,		11},
 	{"", "~/.scripts/battery.sh",						30,		0},
 	{"", "~/.scripts/temp.sh",						5,		0},
-	{" ", "echo \" $(date)\"",						1,		0},
+	{"", "echo \" $(date)\"",						1,		0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
-static char delim = '|';
+static char delim[] = " | ";
+static unsigned int delimLen = 5;
